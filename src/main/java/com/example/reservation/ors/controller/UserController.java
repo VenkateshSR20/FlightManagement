@@ -6,28 +6,27 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.reservation.ors.model.FlightEntity;
-import com.example.reservation.ors.service.FlightService;
+import com.example.reservation.ors.model.UserEntity;
+import com.example.reservation.ors.service.UserService;
 
 @RestController
-@RequestMapping("/flight")
-public class FlightController {
+@RequestMapping("/user")
+public class UserController {
 
 	@Autowired
-	FlightService flightservice;
+	UserService userservice;
 	
 	@RequestMapping(value="")
-	public Object getFlights(){
-				
-		return flightservice.getFlights();
+	public Object getUsers() {
+		
+		return userservice.getUsers();
 		
 	}
 	
 	@PostMapping(value={"/create"})
-	public void createFlights( @RequestBody FlightEntity flightEntity){
+	public void createUsers( @RequestBody UserEntity userEntity){
 		
-		flightservice.createFlights(flightEntity);
+		userservice.createUsers(userEntity);
 		
 	}
-	
 }

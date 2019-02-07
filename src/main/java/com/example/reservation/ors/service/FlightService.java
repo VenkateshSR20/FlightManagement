@@ -21,4 +21,6 @@ public class FlightService {
 	public void createFlights(FlightEntity flightEntity) {
 		flightRepository.save(flightEntity);
 	}
+	
+	//Add the function with getFlight(int flightID)
 }
