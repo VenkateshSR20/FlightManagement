@@ -1,5 +1,9 @@
 package com.example.reservation.ors.model;
 
+/**
+ * it maps to user so return type is "UserEntity
+ */
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -22,7 +26,7 @@ public class BookingEntity implements Serializable{
 	//@Column(name="UserId")
 	@OneToOne
 	@JoinColumn(name="userId")
-	private UserEntity userEntity;//because it maps to user so return type is "UserEntity"
+	private UserEntity userEntity;//because "
 	@Column(name="BookingDate")
 	private Date bookingDate;
 	@Column(name="TravellingDate")
@@ -35,6 +39,8 @@ public class BookingEntity implements Serializable{
 	private String financialInstrument;
 	@Column(name="TotalAmount")
 	private float totalAmount;
+	@Column(name="Status")
+	private String status;
 	
 	public int getBookingId() {
 		return bookingId;
@@ -77,6 +83,12 @@ public class BookingEntity implements Serializable{
 	}
 	public void setFlightEntity(FlightEntity flightEntity) {
 		this.flightEntity = flightEntity;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	//It was looking for flightNumber , we changed to flightEntity, inside flightEntity we have flightNumber
 	
