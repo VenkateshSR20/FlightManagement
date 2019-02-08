@@ -1,10 +1,12 @@
 package com.example.reservation.ors.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "USER")
-public class UserEntity {
+public class UserEntity implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,6 +14,11 @@ public class UserEntity {
 	@Column(name = "USER_NAME")
 	private String userName;
 	
+	
+	
+	public UserEntity() {
+		super();
+	}
 	public int getUserId() {
 		return userId;
 	}

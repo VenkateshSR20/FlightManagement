@@ -1,10 +1,12 @@
 package com.example.reservation.ors.model;
 
+import java.io.Serializable;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "FLIGHT")
-public class FlightEntity {
+public class FlightEntity implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
