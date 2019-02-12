@@ -22,8 +22,14 @@ public class BookingService {
 		return bookingRepository.findById(bookingId).get();
 	}
 	
-	public void setBooking(BookingEntity bookingEntity) {
-		
+	public void setBooking(BookingEntity bookingEntity, boolean isBooking) {
+		 
+		if(isBooking){
+			bookingEntity.setStatus("A");
+		}else{
+			bookingEntity.setStatus("I");
+		}
 		 bookingRepository.save(bookingEntity);
+		 
 	}
 }

@@ -29,9 +29,9 @@ public class BookingController {
 		return bookingservice.getBooking(bookingId);
 	}
 	
-	@PostMapping(value={"/save"})
-	public void setBooking(@RequestBody BookingEntity bookingEntity){
+	@PostMapping(value={"/save/{isBooking}"})
+	public void setBooking(@RequestBody BookingEntity bookingEntity, @PathVariable boolean isBooking){
 		
-		bookingservice.setBooking(bookingEntity);
+		bookingservice.setBooking(bookingEntity,isBooking);
 	}
 }
