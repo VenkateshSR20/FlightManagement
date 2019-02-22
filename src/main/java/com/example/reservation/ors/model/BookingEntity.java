@@ -70,7 +70,7 @@ public class BookingEntity implements Serializable{
 		return bookingDate;
 	}
 	public void setBookingDate(Date bookingDate) {
-		this.bookingDate = bookingDate;
+		this.bookingDate = new Date();
 	}
 	public Date getTravellingDate() {
 		return travellingDate;
