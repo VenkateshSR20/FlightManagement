@@ -1,5 +1,6 @@
 package com.example.reservation.ors.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class BookingService {
 	}
 	
 	public void setBooking(BookingEntity bookingEntity, boolean isBooking) {
-		 
+		bookingEntity.setBookingDate(new Date());
 		if(isBooking){
 			bookingEntity.setStatus("A");
 		}else{
