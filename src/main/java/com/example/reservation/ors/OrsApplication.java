@@ -11,7 +11,7 @@ public class OrsApplication {
 
 	public static void main(String[] args) throws Exception{
 		SpringApplication.run(OrsApplication.class, args);
-		
+		System.out.println("Hello");
 	}
 
 }
